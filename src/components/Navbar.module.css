@@ -1,0 +1,152 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0.75rem 0;
+  transition: all var(--transition-base);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.logoIcon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.logoName {
+  display: block;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--on-surface);
+  line-height: 1.2;
+}
+
+.logoTag {
+  display: block;
+  font-size: 0.6875rem;
+  color: var(--on-surface-variant);
+  letter-spacing: 0.02em;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.navLink {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--on-surface-variant);
+  transition: all var(--transition-fast);
+}
+
+.navLink:hover {
+  background: var(--surface-container);
+  color: var(--on-surface);
+}
+
+.active {
+  background: var(--primary-fixed);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.callBtn {
+  margin-left: 0.75rem;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--on-surface);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+.barOpen1 {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.barOpen2 {
+  opacity: 0;
+}
+
+.barOpen3 {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 360px;
+    height: 100vh;
+    background: var(--surface-container-lowest);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 6rem 2rem 2rem;
+    gap: 0.5rem;
+    transition: right var(--transition-slow);
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .open {
+    right: 0;
+  }
+
+  .navLink {
+    padding: 0.875rem 1.25rem;
+    border-radius: var(--radius-lg);
+    font-size: 1rem;
+  }
+
+  .callBtn {
+    margin-left: 0;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}

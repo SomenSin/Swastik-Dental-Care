@@ -1,0 +1,84 @@
+.pageHeader {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  background: var(--surface-container-low);
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.infoSide {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.infoCard {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  color: inherit;
+}
+
+.infoCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.mapWrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.formSide {
+  position: sticky;
+  top: 100px;
+}
+
+.formCard {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+  .formSide { position: static; }
+}
+
+@media (max-width: 600px) {
+  .infoCards { grid-template-columns: 1fr; }
+  .formRow { grid-template-columns: 1fr; }
+  .formCard { padding: 1.5rem; }
+}
