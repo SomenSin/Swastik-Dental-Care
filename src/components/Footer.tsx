@@ -12,7 +12,7 @@ export default function Footer() {
         {/* Brand */}
         <div className={styles.brand}>
           <div className={styles.logoIcon}>
-            <img src="/images/logo.png" alt="Swastik Dental Care Logo" style={{ width: 32, height: 32, borderRadius: 8, objectFit: "cover" }} />
+            <Image src="/images/logo.png" alt="Swastik Dental Care Logo" width={32} height={32} style={{ borderRadius: '8px' }} />
           </div>
           <h3 className={styles.brandName}>{CLINIC.name}</h3>
           <p className={styles.brandDesc}>
