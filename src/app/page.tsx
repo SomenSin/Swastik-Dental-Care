@@ -55,7 +55,7 @@ export default function HomePage() {
           </div>
           <div className={styles.heroImage}>
             <Image
-              src="/images/hero-clinic.png"
+              src="/Swastik-Dental-Care/images/hero-clinic.png"
               alt="Modern dental clinic with professional dentist"
               width={600}
               height={450}

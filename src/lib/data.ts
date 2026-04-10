@@ -81,7 +81,7 @@ export const DOCTORS = [
     specialization: "General & Cosmetic Dentist",
     experience: "10+ Years Experience",
     bio: "Dr. Ashish Pal is the founder and lead dentist at Swastik Dental Care. With over a decade of experience in general and cosmetic dentistry, he is known for his gentle approach, thorough explanations, and exceptional clinical outcomes. Dr. Pal specializes in root canal treatments, dental implants, cosmetic procedures, and laser dentistry. His passion for patient comfort and advanced dental techniques has made Swastik Dental Care one of the most trusted clinics in Dehradun.",
-    image: "/images/doctor-ashish.png",
+    image: "/Swastik-Dental-Care/images/doctor-ashish.png",
   },
 ];
 
@@ -92,7 +92,7 @@ export const REVIEWS = [
     text: "An absolutely wonderful experience! Dr. Ashish and his team made me feel so comfortable during my root canal. The clinic is spotless and very modern. I walked out pain-free and smiling. Highly recommend!",
     date: "March 2026",
     treatment: "Root Canal",
-    image: "/images/patient-aarav.png",
+    image: "/Swastik-Dental-Care/images/patient-aarav.png",
   },
   {
     name: "Sneha Rawat",
@@ -100,7 +100,7 @@ export const REVIEWS = [
     text: "I brought my 6-year-old son here for his first dental check-up. The staff was incredibly patient and kind. My son actually enjoyed the visit! The pediatric care here is truly exceptional.",
     date: "February 2026",
     treatment: "Pediatric Check-up",
-    image: "/images/patient-sneha.png",
+    image: "/Swastik-Dental-Care/images/patient-sneha.png",
   },
   {
     name: "Vikram Singh",
@@ -108,7 +108,7 @@ export const REVIEWS = [
     text: "Got my dental implants done here and the results are phenomenal. Dr. Ashish explained every step of the procedure. The implants look completely natural. Worth every penny!",
     date: "January 2026",
     treatment: "Dental Implants",
-    image: "/images/patient-vikram.png",
+    image: "/Swastik-Dental-Care/images/patient-vikram.png",
   },
   {
     name: "Deepika Joshi",
@@ -116,7 +116,7 @@ export const REVIEWS = [
     text: "Very professional and hygienic clinic. Got my teeth whitening done and the results are amazing. The only minor issue was the wait time, but the quality of treatment more than made up for it.",
     date: "December 2025",
     treatment: "Teeth Whitening",
-    image: "/images/patient-deepika.png",
+    image: "/Swastik-Dental-Care/images/patient-deepika.png",
   },
   {
     name: "Rahul Panwar",
@@ -124,7 +124,7 @@ export const REVIEWS = [
     text: "I've been coming to Swastik Dental Care for over two years now. From regular check-ups to getting braces, every visit has been smooth and professional. Best dental clinic in Dehradun hands down!",
     date: "November 2025",
     treatment: "Orthodontics",
-    image: "/images/patient-rahul.png",
+    image: "/Swastik-Dental-Care/images/patient-rahul.png",
   },
   {
     name: "Meera Chauhan",
@@ -132,7 +132,7 @@ export const REVIEWS = [
     text: "Dr. Ashish did an incredible job with my root canal treatment. I was terrified before the procedure but he was so calming and professional. No pain at all! The clinic atmosphere is very soothing.",
     date: "October 2025",
     treatment: "Root Canal",
-    image: "/images/patient-meera.png",
+    image: "/Swastik-Dental-Care/images/patient-meera.png",
   },
   {
     name: "Ankit Bisht",
@@ -140,7 +140,7 @@ export const REVIEWS = [
     text: "The doctor is very polite and soft-spoken. He explains the dental problem very clearly and doesn't recommend unnecessary treatments. The clinic is very clean and hygienic with fully sterilized equipment.",
     date: "September 2025",
     treatment: "General Check-up",
-    image: "/images/patient-ankit.png",
+    image: "/Swastik-Dental-Care/images/patient-ankit.png",
   },
   {
     name: "Priti Negi",
@@ -148,7 +148,7 @@ export const REVIEWS = [
     text: "Best dental clinic near Sainik Colony! I had severe tooth pain and Dr. Ashish saw me on short notice. The RCT was completely painless. Very grateful for the quick and professional service.",
     date: "August 2025",
     treatment: "Root Canal",
-    image: "/images/patient-priti.png",
+    image: "/Swastik-Dental-Care/images/patient-priti.png",
   },
   {
     name: "Suresh Thapa",
@@ -156,7 +156,7 @@ export const REVIEWS = [
     text: "I was looking for a reliable dentist for my dentures and was recommended Swastik Dental Care. Dr. Ashish took great care in getting the fit perfect. Very comfortable and natural-looking. Highly satisfied!",
     date: "July 2025",
     treatment: "Dentures",
-    image: "/images/patient-suresh.png",
+    image: "/Swastik-Dental-Care/images/patient-suresh.png",
   },
   {
     name: "Kavita Sharma",
@@ -164,7 +164,7 @@ export const REVIEWS = [
     text: "Very modern clinic with all the latest equipment. Got a professional cleaning done and the experience was great. Dr. Ashish gave me excellent advice on maintaining oral hygiene. Will definitely return.",
     date: "June 2025",
     treatment: "Teeth Cleaning",
-    image: "/images/patient-kavita.png",
+    image: "/Swastik-Dental-Care/images/patient-kavita.png",
   },
 ];
 
