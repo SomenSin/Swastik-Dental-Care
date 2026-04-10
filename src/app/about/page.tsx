@@ -27,7 +27,7 @@ export default function AboutPage() {
         <div className={`container ${styles.storyGrid}`}>
           <div className={styles.storyImage}>
             <Image
-              src="/images/hero-clinic.png"
+              src="/Swastik-Dental-Care/images/hero-clinic.png"
               alt="Swastik Dental Care clinic interior"
               width={560}
               height={400}
