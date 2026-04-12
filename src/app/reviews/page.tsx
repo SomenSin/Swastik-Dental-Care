@@ -58,6 +58,9 @@ export default function ReviewsPage() {
           <div className={styles.masonryGrid}>
             {REVIEWS.map((review, idx) => (
               <div key={idx} className={styles.reviewCard} id={`review-${idx}`}>
+                <div className={styles.quoteIcon}>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM3.01697 21L3.01697 18C3.01697 16.8954 3.9124 16 5.01697 16H8.01697C8.56925 16 9.01697 15.5523 9.01697 15V9C9.01697 8.44772 8.56925 8 8.01697 8H4.01697C3.46468 8 3.01697 8.44772 3.01697 9V11C3.01697 11.5523 2.56925 12 2.01697 12H1.01697V5H11.017V15C11.017 18.3137 8.33068 21 5.01697 21H3.01697Z"/></svg>
+                </div>
                 <div className={styles.reviewHeader}>
                   <div className={styles.avatar}>
                     <Image
@@ -69,20 +72,32 @@ export default function ReviewsPage() {
                     />
                   </div>
                   <div>
-                    <h3 className="title-md">{review.name}</h3>
+                    <h3 className="title-md" style={{ color: 'var(--on-surface)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                      {review.name}
+                      {review.rating === 5 && (
+                        <span className={styles.verifiedBadge} title="Verified Patient">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </span>
+                      )}
+                    </h3>
                     <p className="label-sm text-muted">{review.date}</p>
                   </div>
                 </div>
                 
                 <div className={styles.reviewInfo}>
-                  <Stars count={review.rating} size={20} />
+                  <Stars count={review.rating} size={18} />
                   <span className={styles.bullet}>•</span>
-                  <span className={styles.treatmentBadge}>{review.treatment}</span>
+                  <span className={styles.treatmentTag}>{review.treatment}</span>
                 </div>
 
-                <p className="body-lg text-muted" style={{ position: "relative", zIndex: 1, fontStyle: "italic", marginTop: "0.5rem" }}>
-                  "{review.text}"
+                <p className={styles.reviewText}>
+                  {review.text}
                 </p>
+                
+                <div className={styles.verifiedStatus}>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg>
+                  <span>Verified Experience</span>
+                </div>
               </div>
             ))}
           </div>

@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
   transition: all var(--transition-base);
 }
 
@@ -17,13 +17,13 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   text-decoration: none;
 }
 
 .logoIcon {
-  width: 36px;
-  height: 36px;
+  width: 54px;
+  height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,24 +33,27 @@
 .logoImg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 .logoName {
   display: block;
   font-family: var(--font-headline);
-  font-weight: 700;
-  font-size: 1.125rem;
+  font-weight: 800;
+  font-size: 1.375rem;
   color: var(--on-surface);
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 
 .logoTag {
   display: block;
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   color: var(--on-surface-variant);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 2px;
 }
 
 .links {

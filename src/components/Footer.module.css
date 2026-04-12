@@ -17,20 +17,21 @@
 }
 
 .logoIcon {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
   background: linear-gradient(135deg, var(--primary), var(--primary-container));
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  padding: 8px;
 }
 
 .brandName {
   font-family: var(--font-headline);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 800;
   color: white;
 }
 

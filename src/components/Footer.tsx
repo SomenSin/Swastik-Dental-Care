@@ -12,11 +12,11 @@ export default function Footer() {
         {/* Brand */}
         <div className={styles.brand}>
           <div className={styles.logoIcon}>
-            <Image src="/Swastik-Dental-Care/images/logo.png" alt="Swastik Dental Care Logo" width={32} height={32} style={{ borderRadius: '8px' }} />
+            <Image src="/Swastik-Dental-Care/images/logo.png" alt="Swastik Dental Care Logo" width={48} height={48} />
           </div>
           <h3 className={styles.brandName}>{CLINIC.name}</h3>
           <p className={styles.brandDesc}>
-            Delivering exceptional dental care with compassion and precision in the heart of Dehradun since 2014.
+            Delivering exceptional dental care with compassion and precision in the heart of Dehradun since {CLINIC.since}.
           </p>
           <div className={styles.social}>
             <a href={`https://wa.me/${CLINIC.whatsapp}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className={styles.socialLink}>
@@ -40,12 +40,12 @@ export default function Footer() {
 
         {/* Services */}
         <div className={styles.col}>
-          <h4 className={styles.colTitle}>Services</h4>
-          <span className={styles.footerLink}>General Dentistry</span>
-          <span className={styles.footerLink}>Cosmetic Dentistry</span>
-          <span className={styles.footerLink}>Root Canal Treatment</span>
-          <span className={styles.footerLink}>Dental Implants</span>
-          <span className={styles.footerLink}>Orthodontics</span>
+          <h4 className={styles.colTitle}>Treatments</h4>
+          <Link href="/services?s=root-canal" className={styles.footerLink}>Root Canal Treatment</Link>
+          <Link href="/services?s=dental-implants" className={styles.footerLink}>Dental Implants</Link>
+          <Link href="/services?s=orthodontics" className={styles.footerLink}>Orthodontics (Braces)</Link>
+          <Link href="/services?s=teeth-cleaning" className={styles.footerLink}>Teeth Cleaning</Link>
+          <Link href="/services?s=extraction" className={styles.footerLink}>Painless Extractions</Link>
         </div>
 
         {/* Contact & Legal */}
