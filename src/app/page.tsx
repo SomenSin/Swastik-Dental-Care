@@ -95,7 +95,14 @@ export default function HomePage() {
                 id={`service-${service.id}`}
               >
                 <div className={styles.serviceImageContainer}>
-                  <img src={service.image} alt={service.title} className={styles.serviceImg} />
+                  <Image 
+                    src={service.image} 
+                    alt={service.title} 
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    className={styles.serviceImg} 
+                    loading="lazy"
+                  />
                   <div className={styles.serviceOverlay}>
                     <span>View Full Details</span>
                   </div>

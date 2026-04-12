@@ -16,7 +16,7 @@ export default function Navbar() {
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.logo} id="nav-logo">
           <div className={styles.logoIcon}>
-            <Image src="/Swastik-Dental-Care/images/logo.png" alt="Swastik Dental Care Logo" width={54} height={54} className={styles.logoImg} />
+            <Image src="/Swastik-Dental-Care/images/logo.png" alt="Swastik Dental Care Logo" width={72} height={72} className={styles.logoImg} priority />
           </div>
           <div>
             <span className={styles.logoName}>{CLINIC.name}</span>

@@ -92,8 +92,44 @@
   font-weight: 600;
 }
 
+.infrastructureGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.infrastructure {
+  background: var(--surface-container-lowest);
+}
+
+.infrastructureContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.infraList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.infraItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 @media (max-width: 900px) {
-  .storyGrid { grid-template-columns: 1fr; }
+  .storyGrid, .infrastructureGrid { grid-template-columns: 1fr; }
+  .infrastructureGrid {
+    direction: ltr;
+  }
+  .infrastructureImage {
+    order: -1;
+  }
   .valuesGrid { grid-template-columns: repeat(2, 1fr); }
 }
 

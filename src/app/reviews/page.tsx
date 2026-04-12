@@ -69,6 +69,8 @@ export default function ReviewsPage() {
                       width={64}
                       height={64}
                       className={styles.avatarImg}
+                      loading="lazy"
+                      sizes="64px"
                     />
                   </div>
                   <div>

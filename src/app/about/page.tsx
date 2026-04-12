@@ -32,6 +32,8 @@ export default function AboutPage() {
               width={560}
               height={400}
               className={styles.storyImg}
+              priority
+              sizes="(max-width: 900px) 100vw, 560px"
             />
           </div>
           <div className={styles.storyContent}>
@@ -58,6 +60,40 @@ export default function AboutPage() {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
               Open in Maps
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Infrastructure Section */}
+      <section className={`section ${styles.infrastructure}`}>
+        <div className={`container ${styles.infrastructureGrid}`}>
+          <div className={styles.infrastructureContent}>
+            <div className="badge badge-secondary">Modern Infrastructure</div>
+            <h2 className="headline-md">Advanced Care in a Welcoming Environment</h2>
+            <p className="body-lg text-muted">
+              We believe that a healing environment starts the moment you walk through our doors. Our clinic is designed to be both highly functional and relaxing, with a clean clinical aesthetic that puts our patients at ease.
+            </p>
+            <div className={styles.infraList}>
+              <div className={styles.infraItem}>
+                <h4 className="title-md">Sterilized Environment</h4>
+                <p className="body-sm text-muted">Maintaining the highest international standards of dental hygiene and sterilization.</p>
+              </div>
+              <div className={styles.infraItem}>
+                <h4 className="title-md">Patient Comfort</h4>
+                <p className="body-sm text-muted">Ergonomically designed dental chairs and a soothing lobby area for a pleasant experience.</p>
+              </div>
+            </div>
+          </div>
+          <div className={styles.infrastructureImage}>
+            <Image
+              src="/Swastik-Dental-Care/images/clinic-interior-lobby.png"
+              alt="Swastik Dental Care modern lobby and facility"
+              width={560}
+              height={400}
+              className={styles.storyImg}
+              loading="lazy"
+              sizes="(max-width: 900px) 100vw, 560px"
+            />
           </div>
         </div>
       </section>

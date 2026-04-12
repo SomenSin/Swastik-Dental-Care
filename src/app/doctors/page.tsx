@@ -34,6 +34,8 @@ export default function DoctorsPage() {
                     width={400}
                     height={500}
                     className={styles.doctorImg}
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
                   />
                 </div>
                 <div className={styles.doctorInfo}>
