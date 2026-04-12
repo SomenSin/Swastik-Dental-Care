@@ -127,10 +127,10 @@ export const DOCTORS = [
   {
     id: "dr-shrya",
     name: "Dr. Shrya Kathait Pal",
-    qualification: "BDS, MDS",
-    specialization: "Orthodontist & Specialist",
+    qualification: "BDS",
+    specialization: "General Dentist & Orthodontic Consultant",
     experience: "7+ Years Experience",
-    bio: "Dr. Shrya Kathait Pal is a highly skilled specialist with a Master's degree in Dental Surgery. With 7 years of specialized experience, she excels in orthodontic treatments and complex dental procedures. Her expertise in the latest dental advancements ensures that patients receive the most effective and modern care possible.",
+    bio: "Dr. Shrya Kathait Pal is a dedicated dental professional with 7 years of clinical experience. She specializes in general dentistry with a strong focus on patient comfort and comprehensive dental solutions. Her expertise in managing patient dental anxiety and delivering meticulous treatments has made her a favorite among clinic visitors.",
     image: "/Swastik-Dental-Care/images/doctor-shanu.png",
   },
 ];
@@ -153,6 +153,14 @@ export const REVIEWS = [
     image: "/Swastik-Dental-Care/images/patient-sneha.png",
   },
   {
+    name: "Rahul Panwar",
+    rating: 4,
+    text: "Decent clinic with modern equipment. Dr. Shrya is very gentle. The treatment was good, just felt the reception could be a bit more organized during rush hours.",
+    date: "November 2025",
+    treatment: "Scaling & Polishing",
+    image: "/Swastik-Dental-Care/images/patient-rahul.png",
+  },
+  {
     name: "Vikram Singh",
     rating: 5,
     text: "Excellent service. Got my wisdom tooth extracted here. It was much quicker and less painful than I expected. Appreciate the post-op follow up call too.",
@@ -167,14 +175,6 @@ export const REVIEWS = [
     date: "December 2025",
     treatment: "Teeth Cleaning",
     image: "/Swastik-Dental-Care/images/patient-deepika.png",
-  },
-  {
-    name: "Rahul Panwar",
-    rating: 5,
-    text: "Finally found a dentist I can trust. Dr. Shrya explained the orthodontic options clearly. Started my treatment recently and happy with the progress. Very professional staff.",
-    date: "November 2025",
-    treatment: "Orthodontics",
-    image: "/Swastik-Dental-Care/images/patient-rahul.png",
   },
   {
     name: "Meera Chauhan",

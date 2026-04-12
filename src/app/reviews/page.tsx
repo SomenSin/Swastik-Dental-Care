@@ -55,7 +55,7 @@ export default function ReviewsPage() {
 
       <section className="section" style={{ background: "var(--surface)" }}>
         <div className="container">
-          <div className={styles.masonryGrid}>
+          <div className={styles.reviewsGrid}>
             {REVIEWS.map((review, idx) => (
               <div key={idx} className={styles.reviewCard} id={`review-${idx}`}>
                 <div className={styles.quoteIcon}>
@@ -85,7 +85,7 @@ export default function ReviewsPage() {
                 </div>
                 
                 <div className={styles.reviewInfo}>
-                  <Stars count={review.rating} size={18} />
+                  <Stars count={review.rating} size={22} />
                   <span className={styles.bullet}>•</span>
                   <span className={styles.treatmentTag}>{review.treatment}</span>
                 </div>
