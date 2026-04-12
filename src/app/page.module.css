@@ -120,7 +120,162 @@
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 2rem;
+}
+
+.serviceCard {
+  padding: 0 !important;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.serviceImageContainer {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.serviceImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.serviceCard:hover .serviceImg {
+  transform: scale(1.1);
+}
+
+.serviceOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(var(--primary-rgb), 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.serviceOverlay span {
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 1px solid white;
+  border-radius: var(--radius-sm);
+}
+
+.serviceCard:hover .serviceOverlay {
+  opacity: 1;
+}
+
+.serviceBody {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.serviceIconSmall {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  backdrop-filter: blur(4px);
+}
+
+.modalContent {
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  animation: modalScale 0.3s ease-out;
+}
+
+@keyframes modalScale {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modalClose {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: white;
+  border: none;
+  font-size: 1.5rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: var(--shadow-sm);
+  color: var(--on-surface);
+}
+
+.modalGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.modalImageSide {
+  height: 100%;
+}
+
+.modalImageSide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modalTextSide {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.featureList li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--on-surface-variant);
 }
 
 /* Why Us */
@@ -197,4 +352,9 @@
   .servicesGrid { grid-template-columns: 1fr; }
   .whyGrid { grid-template-columns: 1fr; }
   .ctaInner { padding: 3rem 1.5rem; }
+
+  .modalGrid { grid-template-columns: 1fr; }
+  .modalImageSide { height: 250px; }
+  .modalTextSide { padding: 2rem 1.5rem; }
+  .featureList { grid-template-columns: 1fr; }
 }

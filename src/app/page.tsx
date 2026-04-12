@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { CLINIC, SERVICES } from "@/lib/data";
 import styles from "./page.module.css";
 
@@ -40,7 +43,7 @@ export default function HomePage() {
             </div>
             <div className={styles.heroStats}>
               <div className={styles.stat}>
-                <span className={styles.statNum}>10+</span>
+                <span className={styles.statNum}>{CLINIC.experience}</span>
                 <span className={styles.statLabel}>Years Experience</span>
               </div>
               <div className={styles.stat}>
@@ -65,8 +68,8 @@ export default function HomePage() {
             <div className={styles.heroFloat}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--tertiary)" strokeWidth="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
               <div>
-                <strong>100% Safe</strong>
-                <span>Sterilized Equipment</span>
+                <strong>Since {CLINIC.since}</strong>
+                <span>Professional Care</span>
               </div>
             </div>
           </div>
@@ -80,18 +83,33 @@ export default function HomePage() {
             <div className="badge badge-primary">Our Services</div>
             <h2 className="headline-lg">Comprehensive Dental Solutions</h2>
             <p className="body-lg text-muted">
-              We offer a full spectrum of dental services to keep your smile healthy, beautiful, and confident.
+              We offer a full spectrum of dental services to keep your smile healthy, beautiful, and confident. Click on any service for details.
             </p>
           </div>
           <div className={styles.servicesGrid}>
             {SERVICES.map((service) => (
-              <div key={service.id} className="card" id={`service-${service.id}`}>
-                <div className="icon-badge">
-                  {serviceIcons[service.icon]}
+              <Link 
+                key={service.id} 
+                href={`/services?s=${service.id}`}
+                className={`card ${styles.serviceCard}`} 
+                id={`service-${service.id}`}
+              >
+                <div className={styles.serviceImageContainer}>
+                  <img src={service.image} alt={service.title} className={styles.serviceImg} />
+                  <div className={styles.serviceOverlay}>
+                    <span>View Full Details</span>
+                  </div>
                 </div>
-                <h3 className="title-lg" style={{ marginTop: "1rem" }}>{service.title}</h3>
-                <p className="body-md text-muted" style={{ marginTop: "0.5rem" }}>{service.description}</p>
-              </div>
+                <div className={styles.serviceBody}>
+                  <div className={styles.serviceHeader}>
+                    <div className={styles.serviceIconSmall}>
+                      {serviceIcons[service.icon]}
+                    </div>
+                    <h3 className="title-md">{service.title}</h3>
+                  </div>
+                  <p className="body-sm text-muted">{service.description}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

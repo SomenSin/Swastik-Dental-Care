@@ -5,7 +5,7 @@ import styles from "./about.module.css";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: `Learn about ${CLINIC.name} – a trusted dental clinic in Dehradun providing compassionate, advanced dental care since 2014.`,
+  description: `Learn about ${CLINIC.name} – a trusted dental clinic in Dehradun providing compassionate, advanced dental care since ${CLINIC.since}.`,
 };
 
 export default function AboutPage() {
@@ -35,9 +35,9 @@ export default function AboutPage() {
             />
           </div>
           <div className={styles.storyContent}>
-            <h2 className="headline-md">A Decade of Dedicated Dental Care</h2>
+            <h2 className="headline-md">{CLINIC.experience} Years of Dedicated Dental Care</h2>
             <p className="body-lg text-muted">
-              Founded in 2014 as Latika Dental Care, we have grown into one of Dehradun&apos;s most trusted dental clinics. Now operating as <strong>{CLINIC.name}</strong>, our mission remains unchanged — to provide world-class dental treatments in a warm, welcoming environment.
+              Founded in {CLINIC.since} as Latika Dental Care, we have grown into one of Dehradun&apos;s most trusted dental clinics. Now operating as <strong>{CLINIC.name}</strong>, our mission remains unchanged — to provide world-class dental treatments in a warm, welcoming environment.
             </p>
             <p className="body-md text-muted">
               Nestled in the serene locality of Harrawala, near Sainik Colony, our clinic is equipped with the latest dental technology including digital X-rays, laser dentistry tools, and CAD/CAM systems. Every treatment room is sterilized to international standards, ensuring your safety is never compromised.

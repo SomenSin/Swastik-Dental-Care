@@ -4,11 +4,17 @@
   background: var(--surface-container-low);
 }
 
-.doctorFeature {
+.doctorsGrid {
   display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 3.5rem;
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  align-items: start;
+}
+
+.doctorCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .imageWrapper {
@@ -17,7 +23,7 @@
 
 .doctorImg {
   width: 100%;
-  height: auto;
+  aspect-ratio: 4/5;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
   object-fit: cover;
@@ -32,7 +38,7 @@
 .doctorActions {
   display: flex;
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   flex-wrap: wrap;
 }
 
@@ -61,8 +67,8 @@
   color: var(--on-surface-variant);
 }
 
-@media (max-width: 900px) {
-  .doctorFeature {
+@media (max-width: 768px) {
+  .doctorsGrid {
     grid-template-columns: 1fr;
     text-align: center;
   }
@@ -82,5 +88,6 @@
 
   .statsRow {
     justify-content: center;
+    gap: 1.5rem;
   }
 }
