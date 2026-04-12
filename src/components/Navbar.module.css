@@ -119,6 +119,19 @@
 }
 
 @media (max-width: 900px) {
+  .logoIcon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logoName {
+    font-size: 1.25rem;
+  }
+
+  .logoTag {
+    font-size: 0.75rem;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -128,9 +141,11 @@
     top: 0;
     right: -100%;
     width: 80%;
-    max-width: 360px;
+    max-width: 320px;
     height: 100vh;
-    background: var(--surface-container-lowest);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     flex-direction: column;
     align-items: stretch;
     padding: 6rem 2rem 2rem;
@@ -147,11 +162,17 @@
     padding: 0.875rem 1.25rem;
     border-radius: var(--radius-lg);
     font-size: 1rem;
+    border-bottom: 1px solid var(--surface-container);
+  }
+
+  .navLink:last-of-type {
+    border-bottom: none;
   }
 
   .callBtn {
     margin-left: 0;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     text-align: center;
+    width: 100%;
   }
 }
