@@ -5,7 +5,7 @@ export const CLINIC = {
   experience: "8+",
   phone: "+918006158666",
   phoneDisplay: "+91 80061 58666",
-  whatsapp: "8006158666",
+  whatsapp: "918006158666",
   email: "swastikdentalcare.ddn@gmail.com",
   address: {
     line1: "Near Sainik Colony",
