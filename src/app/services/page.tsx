@@ -37,17 +37,26 @@ function ServicesContent() {
       <section className="section">
         <div className="container">
           <div className={styles.servicesList}>
-            {SERVICES.map((service) => (
+            {SERVICES.map((service, idx) => (
               <div 
                 key={service.id} 
                 id={`service-${service.id}`} 
                 className={`${styles.serviceItem} ${selectedId === service.id ? styles.active : ""}`}
               >
                 <div className={styles.imageCol}>
-                  <img src={service.image} alt={service.title} className={styles.mainImg} />
+                  <div className={styles.imgContainer}>
+                    <Image 
+                      src={service.image} 
+                      alt={service.title} 
+                      fill
+                      sizes="(max-width: 900px) 100vw, 560px"
+                      className={styles.mainImg}
+                      priority={idx === 0}
+                      loading={idx === 0 ? "eager" : "lazy"}
+                    />
+                  </div>
                   <div className={styles.iconOverlay}>
                     <div className={styles.iconInner}>
-                      {/* Placeholder for icons - you could use the same SVG logic as Home page */}
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2C7 2 3 6 3 11c0 3.5 2 6.5 5 8v3l4-2 4 2v-3c3-1.5 5-4.5 5-8 0-5-4-9-9-9z"/></svg>
                     </div>
                   </div>
@@ -67,10 +76,10 @@ function ServicesContent() {
 
                   <div className={styles.actions}>
                     <Link href="/contact" className="btn btn-primary">
-                      Book Appointment for {service.title}
+                      Book {service.title}
                     </Link>
                     <a href={`https://wa.me/${CLINIC.whatsapp}?text=I%27m%20interested%20in%20${service.title}`} target="_blank" className="btn btn-whatsapp">
-                      Inquire on WhatsApp
+                      Contact WhatsApp
                     </a>
                   </div>
                 </div>

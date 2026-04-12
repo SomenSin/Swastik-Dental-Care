@@ -13,12 +13,13 @@
 .serviceItem {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
+  gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
   scroll-margin-top: 100px;
-  padding: 2rem;
+  padding: clamp(1rem, 3vw, 2.5rem);
   border-radius: var(--radius-xl);
   transition: all var(--transition-base);
+  overflow-wrap: break-word;
 }
 
 .serviceItem.active {
@@ -28,79 +29,117 @@
 
 .imageCol {
   position: relative;
+  width: 100%;
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
 }
 
 .mainImg {
-  width: 100%;
-  aspect-ratio: 4/3;
   object-fit: cover;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
 }
 
 .iconOverlay {
   position: absolute;
-  top: -1rem;
-  left: -1rem;
+  top: -0.75rem;
+  left: -0.75rem;
   background: var(--primary);
   color: white;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-md);
+  z-index: 2;
 }
 
 .contentCol {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  min-width: 0; /* Prevents flex overflow */
 }
 
 .featuresGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
   background: var(--surface-container-lowest);
-  padding: 1.5rem;
+  padding: 1.25rem;
   border-radius: var(--radius-md);
 }
 
 .feature {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  align-items: flex-start;
+  gap: 0.5rem;
   font-size: 0.9375rem;
   color: var(--on-surface-variant);
+  line-height: 1.4;
 }
 
 .actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 0.5rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+  .serviceItem {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 850px) {
   .serviceItem {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+  }
+  
+  .imageCol {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .contentCol {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .featuresGrid {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 500px) {
+  .featuresGrid {
+    grid-template-columns: 1fr;
     padding: 1rem;
   }
   
-  .serviceItem:nth-child(even) .imageCol {
-    order: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .featuresGrid {
-    grid-template-columns: 1fr;
-  }
-  
-  .actions .btn {
+  .actions {
+    flex-direction: column;
     width: 100%;
+  }
+
+  .actions > * {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .iconOverlay {
+    top: -0.5rem;
+    left: -0.5rem;
+    width: 36px;
+    height: 36px;
   }
 }
