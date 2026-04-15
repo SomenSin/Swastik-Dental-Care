@@ -11,12 +11,16 @@ export default function ContactPage() {
     e.preventDefault();
     setFormState("sending");
     const form = e.currentTarget;
-    const data = new FormData(form);
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
     try {
       const res = await fetch("https://formspree.io/f/xvzdzzgw", {
         method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
+        body: JSON.stringify(data),
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json" 
+        },
       });
       if (res.ok) {
         setFormState("sent");
