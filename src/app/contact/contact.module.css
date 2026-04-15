@@ -108,13 +108,68 @@
 @media (max-width: 900px) {
   .contactGrid {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
   .formSide { position: static; }
 }
 
 @media (max-width: 600px) {
-  .timingsBanner { flex-direction: column; text-align: center; padding: 1.5rem; }
-  .timingsText { flex-direction: column; gap: 0.25rem; }
-  .formRow { grid-template-columns: 1fr; }
-  .formCard { padding: 1.5rem; }
+  .pageHeader {
+    padding: 2rem 0;
+  }
+  
+  .timingsBanner { 
+    flex-direction: column; 
+    text-align: center; 
+    padding: 1.5rem 1rem;
+    gap: 0.75rem; 
+    margin-bottom: 2rem;
+  }
+  
+  .timingsText { 
+    flex-direction: column; 
+    gap: 0.5rem; 
+    font-size: 0.9375rem;
+  }
+
+  .timingsSunday {
+    margin-left: 0;
+    font-weight: 700;
+  }
+
+  .infoCard {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .infoCard .label-sm {
+    font-size: 0.75rem;
+  }
+
+  .infoCard .title-md {
+    font-size: 1rem;
+    word-break: break-all;
+  }
+
+  .formCard {
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .formRow { 
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .mapWrap iframe {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .infoCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
 }
