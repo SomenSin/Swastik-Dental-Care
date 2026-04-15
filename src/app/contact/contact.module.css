@@ -11,33 +11,68 @@
   align-items: start;
 }
 
-.infoSide {
+.timingsBanner {
+  background: var(--primary);
+  color: white;
+  padding: 1.25rem 2rem;
+  border-radius: var(--radius-xl);
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.timingsIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.timingsText {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.timingsDays {
+  color: #a5f3fc; /* Cyan-200 for high visibility on blue */
+}
+
+.timingsSunday {
+  color: #fca5a5; /* Red-300 for visibility on blue */
+  font-size: 0.875rem;
+  margin-left: 0.5rem;
 }
 
 .infoCards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
 .infoCard {
   background: var(--surface-container-lowest);
   border-radius: var(--radius-lg);
-  padding: 1.25rem;
+  padding: 1.5rem;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1.25rem;
   transition: all var(--transition-fast);
   text-decoration: none;
   color: inherit;
+  border: 1px solid var(--surface-container);
 }
 
 .infoCard:hover {
   box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  transform: translateX(4px);
+  border-color: var(--primary-container);
 }
 
 .mapWrap {
@@ -78,7 +113,8 @@
 }
 
 @media (max-width: 600px) {
-  .infoCards { grid-template-columns: 1fr; }
+  .timingsBanner { flex-direction: column; text-align: center; padding: 1.5rem; }
+  .timingsText { flex-direction: column; gap: 0.25rem; }
   .formRow { grid-template-columns: 1fr; }
   .formCard { padding: 1.5rem; }
 }

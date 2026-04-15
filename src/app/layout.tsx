@@ -7,45 +7,54 @@ import { CLINIC } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: {
-    default: `${CLINIC.name} | Best Dentist in Dehradun – Dental Implants, Root Canal, Braces`,
-    template: `%s | ${CLINIC.name}`,
+    default: `Swastik Dental Care | Best Dentist in Dehradun – Expert Dental Clinic`,
+    template: `%s | ${CLINIC.name} Dehradun`,
   },
-  description: `${CLINIC.name} provides expert dental care in Dehradun – dental implants, root canal, cosmetic dentistry, braces, teeth whitening, and pediatric dentistry. Book your appointment today!`,
+  description: `${CLINIC.name} is the top-rated dental clinic in Dehradun. We specialize in Dental Implants, Root Canal Treatment (RCT), Braces, Orthodontics, and Teeth Whitening in Harrawala. Book your consultation with our expert dentists today!`,
   keywords: [
-    "dentist dehradun",
-    "dental clinic dehradun",
-    "root canal dehradun",
+    "best dentist in dehradun",
+    "dental clinic in dehradun",
+    "dentist in harrawala dehradun",
+    "root canal treatment dehradun",
     "dental implants dehradun",
-    "best dentist harrawala",
-    "swastik dental care",
-    "teeth whitening dehradun",
-    "orthodontist dehradun",
-    "braces dehradun",
+    "braces cost dehradun",
+    "orthodontist in dehradun",
+    "swastik dental care dehradun",
+    "affordable dentist dehradun",
     "pediatric dentist dehradun",
+    "emergency dental care dehradun",
+    "teeth whitening dehradun",
   ],
-  authors: [{ name: CLINIC.name }],
+  authors: [{ name: "Dr. Ashish Pal" }, { name: "Dr. Shrya Kathait Pal" }],
   creator: CLINIC.name,
   openGraph: {
     type: "website",
     locale: "en_IN",
     siteName: CLINIC.name,
     title: `${CLINIC.name} | Best Dental Clinic in Dehradun`,
-    description: `Expert dental care – implants, root canals, cosmetic dentistry, and more. Visit us at ${CLINIC.address.full}.`,
+    description: `Expert dental care in Dehradun – Implants, Root Canals, and Orthodontics. Visit the most trusted dentists at ${CLINIC.address.full}.`,
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
-  metadataBase: new URL("https://swastikdentalcare.in"),
+  metadataBase: new URL("https://swastikdentalcare.info"), // Updated domain placeholder
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Dentist",
   name: CLINIC.name,
-  image: "/images/clinic-exterior.jpg",
-  "@id": "https://swastikdentalcare.in",
-  url: "https://swastikdentalcare.in",
+  image: "https://swastikdentalcare.info/images/logo.png",
+  "@id": "https://swastikdentalcare.info",
+  url: "https://swastikdentalcare.info",
   telephone: CLINIC.phone,
   address: {
     "@type": "PostalAddress",
@@ -64,22 +73,28 @@ const jsonLd = {
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "09:00",
-      closes: "20:00",
+      opens: "10:00",
+      closes: "13:30",
     },
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Sunday",
-      opens: "10:00",
-      closes: "14:00",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "17:00",
+      closes: "20:00",
     },
+    {
+       "@type": "OpeningHoursSpecification",
+       dayOfWeek: "Sunday",
+       opens: "00:00",
+       closes: "00:00", // Closed
+    }
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: CLINIC.rating.toString(),
-    reviewCount: CLINIC.totalReviews.toString(),
+    ratingValue: "4.7",
+    reviewCount: "40",
   },
-  priceRange: "$$",
+  priceRange: "₹₹",
   sameAs: [CLINIC.googleMapsUrl],
 };
 

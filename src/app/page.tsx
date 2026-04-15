@@ -59,7 +59,7 @@ export default function HomePage() {
           <div className={styles.heroImage}>
             <Image
               src="/Swastik-Dental-Care/images/hero-clinic.png"
-              alt="Modern dental clinic with professional dentist"
+              alt="Dr. Shrya conducting a dental check-up camp at Swastik Dental Care"
               width={600}
               height={450}
               priority
@@ -131,7 +131,7 @@ export default function HomePage() {
           </div>
           <div className={styles.whyGrid}>
             {[
-              { title: "State-of-Art Equipment", desc: "Digital X-rays, laser dentistry, and CAD/CAM technology for precise, efficient treatments.", icon: "⚡" },
+              { title: "State-of-Art Equipment", desc: "Digital X-rays, advanced rotary systems, and CAD/CAM technology for precise, efficient treatments.", icon: "⚡" },
               { title: "Pain-Free Treatments", desc: "Modern anesthesia techniques and a gentle approach ensure comfortable, anxiety-free visits.", icon: "💆" },
               { title: "Affordable Care", desc: "Quality dental care at fair prices with flexible payment options and insurance acceptance.", icon: "💰" },
               { title: "Sterilized & Hygienic", desc: "International-grade sterilization protocols to ensure 100% infection-free procedures.", icon: "🛡️" },

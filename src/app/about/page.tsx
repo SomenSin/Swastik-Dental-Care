@@ -4,11 +4,18 @@ import { CLINIC } from "@/lib/data";
 import styles from "./about.module.css";
 
 export const metadata: Metadata = {
-  title: "About Us",
-  description: `Learn about ${CLINIC.name} – a trusted dental clinic in Dehradun providing compassionate, advanced dental care since ${CLINIC.since}.`,
+  title: "Best Dental Clinic in Dehradun | Our Story & Expertise",
+  description: `Discover how Swastik Dental Care became the most trusted dental clinic in Harrawala, Dehradun. Exceptional care in implants, RCT, and braces since ${CLINIC.since}.`,
 };
 
 export default function AboutPage() {
+  const campImages = [
+    { src: "/Swastik-Dental-Care/images/hero-clinic.png", alt: "Dr. Shrya consulting a patient at a dental camp" },
+    { src: "/Swastik-Dental-Care/images/camp-1.jpg", alt: "Dr. Ashish and Dr. Shrya at a dental check-up camp" },
+    { src: "/Swastik-Dental-Care/images/camp-2.jpg", alt: "The medical team at Swastik Dental Care camp" },
+    { src: "/Swastik-Dental-Care/images/camp-3.jpg", alt: "Patient screening during dental outreach" },
+  ];
+
   return (
     <>
       {/* Page Header */}
@@ -16,134 +23,141 @@ export default function AboutPage() {
         <div className="container">
           <div className="badge badge-primary">About Us</div>
           <h1 className="display-md">Our Story & Mission</h1>
-          <p className="body-lg text-muted" style={{ maxWidth: 600, margin: "0.75rem auto 0" }}>
-            Delivering exceptional dental care with compassion and cutting-edge technology in the heart of Dehradun.
+          <p className="body-lg text-muted" style={{ maxWidth: 640, margin: "1rem auto 0" }}>
+            Since {CLINIC.since}, we have been dedicated to delivering exceptional dental care with compassion and modern technology in the heart of Dehradun.
           </p>
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Story & Facility Section */}
       <section className={`section ${styles.story}`}>
         <div className={`container ${styles.storyGrid}`}>
-          <div className={styles.storyImage}>
-            <Image
-              src="/Swastik-Dental-Care/images/hero-clinic.png"
-              alt="Swastik Dental Care clinic interior"
-              width={560}
-              height={400}
-              className={styles.storyImg}
-              priority
-              sizes="(max-width: 900px) 100vw, 560px"
-            />
-          </div>
           <div className={styles.storyContent}>
-            <h2 className="headline-md">{CLINIC.experience} Years of Dedicated Dental Care</h2>
+            <div className="badge badge-secondary" style={{ alignSelf: 'flex-start' }}>Our Heritage & Facility</div>
+            <h2 className="headline-md">{CLINIC.experience} Years of Dedicated Dental Excellence</h2>
             <p className="body-lg text-muted">
-              Founded in {CLINIC.since} as Latika Dental Care, we have grown into one of Dehradun&apos;s most trusted dental clinics. Now operating as <strong>{CLINIC.name}</strong>, our mission remains unchanged — to provide world-class dental treatments in a warm, welcoming environment.
+              Founded as Latika Dental Care, we have evolved into <strong>{CLINIC.name}</strong>, a cornerstone of dental health in Harrawala. Led by <strong>Dr. Ashish Pal</strong> and <strong>Dr. Shrya Kathait Pal</strong>, our mission is to provide world-class treatments in an environment where patients feel like family.
             </p>
             <p className="body-md text-muted">
-              Nestled in the serene locality of Harrawala, near Sainik Colony, our clinic is equipped with the latest dental technology including digital X-rays, laser dentistry tools, and CAD/CAM systems. Every treatment room is sterilized to international standards, ensuring your safety is never compromised.
+              Our modern facility at Harrawala is designed for your comfort, featuring ergonomically designed chairs and global sterilization protocols to ensure a safe and soothing experience for every visit.
             </p>
-            <p className="body-md text-muted">
-              We believe every patient deserves a pain-free, anxiety-free experience. Our team of experienced dentists takes the time to listen, explain, and customize treatments for your unique needs.
-            </p>
+            
+            <ul className={styles.featureList} style={{ margin: '1rem 0' }}>
+              <li>Digitized Dental Records</li>
+              <li>Minimal Radiation X-Rays</li>
+              <li>Gentle Rotary Endodontics</li>
+              <li>International Hygiene Standards</li>
+            </ul>
 
-            {/* Open in Maps Button */}
+            <div className={styles.pointsGrid}>
+              <div className={styles.pointItem}>
+                <strong>Integrity</strong>
+                <span>Honest advice and transparent pricing.</span>
+              </div>
+              <div className={styles.pointItem}>
+                <strong>Innovation</strong>
+                <span>Continuous adoption of advanced tech.</span>
+              </div>
+            </div>
+
             <a
               href={CLINIC.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary"
               id="about-maps-btn"
-              style={{ marginTop: "1.5rem" }}
+              style={{ alignSelf: 'flex-start', marginTop: '1.5rem' }}
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Open in Maps
+              Visit Our Clinic
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* Infrastructure Section */}
-      <section className={`section ${styles.infrastructure}`}>
-        <div className={`container ${styles.infrastructureGrid}`}>
-          <div className={styles.infrastructureContent}>
-            <div className="badge badge-secondary">Modern Infrastructure</div>
-            <h2 className="headline-md">Advanced Care in a Welcoming Environment</h2>
-            <p className="body-lg text-muted">
-              We believe that a healing environment starts the moment you walk through our doors. Our clinic is designed to be both highly functional and relaxing, with a clean clinical aesthetic that puts our patients at ease.
-            </p>
-            <div className={styles.infraList}>
-              <div className={styles.infraItem}>
-                <h4 className="title-md">Sterilized Environment</h4>
-                <p className="body-sm text-muted">Maintaining the highest international standards of dental hygiene and sterilization.</p>
-              </div>
-              <div className={styles.infraItem}>
-                <h4 className="title-md">Patient Comfort</h4>
-                <p className="body-sm text-muted">Ergonomically designed dental chairs and a soothing lobby area for a pleasant experience.</p>
-              </div>
+          <div className={styles.storyImage}>
+            <Image
+              src="/Swastik-Dental-Care/images/about-heritage.jpg"
+              alt="Dr. Ashish Pal and Dr. Shrya Kathait Pal at Swastik Dental Care"
+              width={560}
+              height={600}
+              className={styles.storyImg}
+              priority
+            />
+            <div className={styles.experienceBadge}>
+              <span className={styles.expNum}>{CLINIC.experience}</span>
+              <span className={styles.expText}>Successful Years</span>
             </div>
           </div>
-          <div className={styles.infrastructureImage}>
-            <Image
-              src="/Swastik-Dental-Care/images/clinic-interior-lobby.png"
-              alt="Swastik Dental Care modern lobby and facility"
-              width={560}
-              height={400}
-              className={styles.storyImg}
-              loading="lazy"
-              sizes="(max-width: 900px) 100vw, 560px"
-            />
-          </div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className={`section ${styles.values}`}>
+      {/* Community Impact Section */}
+      <section className={`section ${styles.camp}`}>
         <div className="container">
           <div className={styles.sectionHeader}>
-            <div className="badge badge-tertiary">Our Values</div>
-            <h2 className="headline-lg">What Drives Us</h2>
+            <div className="badge badge-tertiary">Community Impact</div>
+            <h2 className="headline-lg">Spreading Smiles Beyond the Clinic</h2>
+            <p className="body-lg text-muted">
+              We believe that quality dental care should be accessible to all. Our team regularly organizes Dental Check-up Camps across Uttarakhand to provide free screenings, expert advice, and oral hygiene education to children and families.
+            </p>
           </div>
-          <div className={styles.valuesGrid}>
-            {[
-              { icon: "🎯", title: "Patient-First Approach", desc: "Every decision we make is centered around your comfort, safety, and the best possible outcome." },
-              { icon: "🔬", title: "Clinical Excellence", desc: "We invest in continuous learning and advanced technology to deliver treatments that meet global standards." },
-              { icon: "🤝", title: "Transparency & Trust", desc: "We explain every procedure, every cost, and every option — so you always feel confident and informed." },
-              { icon: "💚", title: "Community Care", desc: "We're proud to serve the Dehradun community with affordable dental care, free check-up camps, and oral health education." },
-            ].map((item, idx) => (
-              <div key={idx} className="card" style={{ textAlign: "center" }}>
-                <span style={{ fontSize: "2.5rem" }}>{item.icon}</span>
-                <h3 className="title-lg" style={{ marginTop: "1rem" }}>{item.title}</h3>
-                <p className="body-sm text-muted" style={{ marginTop: "0.5rem" }}>{item.desc}</p>
+          
+          <div className={styles.campGallery}>
+            {campImages.map((img, i) => (
+              <div key={i} className={styles.galleryItem}>
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className={styles.galleryImg}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <div className={styles.galleryOverlay}>
+                   <p className="body-sm">{img.alt}</p>
+                </div>
               </div>
             ))}
+          </div>
+          
+          <div className={styles.campHighlights}>
+            <div className={styles.highlightCard}>
+              <span className={styles.highlightIcon}>🏥</span>
+              <h3>Free Screenings</h3>
+              <p>Comprehensive oral health check-ups for rural and urban communities.</p>
+            </div>
+            <div className={styles.highlightCard}>
+              <span className={styles.highlightIcon}>📚</span>
+              <h3>Awareness Talks</h3>
+              <p>Educating children about the importance of preventive dental care.</p>
+            </div>
+            <div className={styles.highlightCard}>
+              <span className={styles.highlightIcon}>🦷</span>
+              <h3>Early Detection</h3>
+              <p>Identifying potential issues before they become painful emergencies.</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Clinic Hours */}
-      <section className={`section`} style={{ background: "var(--surface-container-low)" }}>
+      <section className={`section`} style={{ background: "var(--surface)" }}>
         <div className="container">
-          <div className={styles.sectionHeader}>
-            <h2 className="headline-md">Clinic Hours</h2>
-          </div>
-          <div className={styles.hoursCard}>
-            <div className={styles.hourRow}>
-              <span className={styles.hourDay}>Monday – Saturday (Morning)</span>
-              <span className={styles.hourTime}>{CLINIC.hours.morning}</span>
+          <div className={styles.hoursWrapper}>
+            <div className={styles.hoursInfo}>
+               <h2 className="headline-sm">We&apos;re Here to Help</h2>
+               <p className="body-md text-muted">Our flexible morning and evening batches ensure you never have to compromise your schedule for your health.</p>
             </div>
-            <div className={styles.hourRow}>
-              <span className={styles.hourDay}>Monday – Saturday (Evening)</span>
-              <span className={styles.hourTime}>{CLINIC.hours.evening}</span>
+            <div className={styles.hoursCard}>
+              <div className={styles.hourRow}>
+                <span className={styles.hourDay}>Mon – Sat (Morning)</span>
+                <span className={styles.hourTime}>{CLINIC.hours.morning}</span>
+              </div>
+              <div className={styles.hourRow}>
+                <span className={styles.hourDay}>Mon – Sat (Evening)</span>
+                <span className={styles.hourTime}>{CLINIC.hours.evening}</span>
+              </div>
+              <div className={styles.hourRow}>
+                <span className={styles.hourDay}>Sunday</span>
+                <span className={styles.hourTime} style={{ color: "var(--error)" }}>{CLINIC.hours.sunday}</span>
+              </div>
             </div>
-            <div className={styles.hourRow}>
-              <span className={styles.hourDay}>Sunday</span>
-              <span className={styles.hourTime} style={{ color: "var(--error)" }}>{CLINIC.hours.sunday}</span>
-            </div>
-            <p className="body-sm text-muted" style={{ marginTop: "1rem", textAlign: "center" }}>
-              📍 {CLINIC.address.full}
-            </p>
           </div>
         </div>
       </section>

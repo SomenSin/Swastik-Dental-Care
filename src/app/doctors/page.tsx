@@ -5,8 +5,8 @@ import { DOCTORS, CLINIC } from "@/lib/data";
 import styles from "./doctors.module.css";
 
 export const metadata: Metadata = {
-  title: "Our Doctors",
-  description: `Meet our expert dental team at ${CLINIC.name}, Dehradun. Highly experienced specialists dedicated to your oral health since 2017.`,
+  title: "Expert Dentists in Dehradun | Meet Our Specialists",
+  description: `Meet Dr. Ashish Pal and Dr. Shrya Kathait Pal – Dehradun's highly-rated dental specialists specializing in Dental Implants and Root Canal treatments.`,
 };
 
 export default function DoctorsPage() {
