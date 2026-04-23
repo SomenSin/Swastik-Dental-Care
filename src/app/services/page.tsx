@@ -5,6 +5,7 @@ import { useEffect, useState, Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { SERVICES, CLINIC } from "@/lib/data";
+import { getPath } from "@/lib/utils";
 import styles from "./services.module.css";
 
 function ServicesContent() {
@@ -46,7 +47,7 @@ function ServicesContent() {
                 <div className={styles.imageCol}>
                   <div className={styles.imgContainer}>
                     <Image 
-                      src={service.image} 
+                      src={getPath(service.image)} 
                       alt={service.title} 
                       fill
                       sizes="(max-width: 900px) 100vw, 560px"

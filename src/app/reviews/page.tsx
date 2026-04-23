@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { REVIEWS, CLINIC } from "@/lib/data";
+import { getPath } from "@/lib/utils";
 import styles from "./reviews.module.css";
 
 export const metadata: Metadata = {
@@ -64,7 +65,7 @@ export default function ReviewsPage() {
                 <div className={styles.reviewHeader}>
                   <div className={styles.avatar}>
                     <Image
-                      src={review.image}
+                      src={getPath(review.image)}
                       alt={review.name}
                       width={64}
                       height={64}

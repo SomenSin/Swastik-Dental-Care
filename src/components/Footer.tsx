@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CLINIC, NAV_LINKS } from "@/lib/data";
+import { getPath } from "@/lib/utils";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -12,7 +13,7 @@ export default function Footer() {
         {/* Brand */}
         <div className={styles.brand}>
           <div className={styles.logoIcon}>
-            <Image src="/images/logo.png" alt="Swastik Dental Care Logo" width={96} height={96} />
+            <Image src={getPath("/images/logo.png")} alt="Swastik Dental Care Logo" width={96} height={96} />
           </div>
           <h3 className={styles.brandName}>{CLINIC.name}</h3>
           <p className={styles.brandDesc}>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { CLINIC, SERVICES } from "@/lib/data";
+import { getPath } from "@/lib/utils";
 import styles from "./page.module.css";
 
 const serviceIcons: Record<string, React.ReactNode> = {
@@ -58,7 +59,7 @@ export default function HomePage() {
           </div>
           <div className={styles.heroImage}>
             <Image
-              src="/images/hero-clinic.png"
+              src={getPath("/images/hero-clinic.png")}
               alt="Dr. Shrya conducting a dental check-up camp at Swastik Dental Care"
               width={600}
               height={450}
@@ -96,7 +97,7 @@ export default function HomePage() {
               >
                 <div className={styles.serviceImageContainer}>
                   <Image 
-                    src={service.image} 
+                    src={getPath(service.image)} 
                     alt={service.title} 
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"

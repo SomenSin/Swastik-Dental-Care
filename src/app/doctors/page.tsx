@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { DOCTORS, CLINIC } from "@/lib/data";
+import { getPath } from "@/lib/utils";
 import styles from "./doctors.module.css";
 
 export const metadata: Metadata = {
@@ -29,7 +30,7 @@ export default function DoctorsPage() {
               <div key={doctor.id} className={styles.doctorCard}>
                 <div className={styles.imageWrapper}>
                   <Image
-                    src={doctor.image}
+                    src={getPath(doctor.image)}
                     alt={doctor.name}
                     width={400}
                     height={500}

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { CLINIC, NAV_LINKS } from "@/lib/data";
+import { getPath } from "@/lib/utils";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -16,7 +17,7 @@ export default function Navbar() {
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.logo} id="nav-logo">
           <div className={styles.logoIcon}>
-            <Image src="/images/logo.png" alt="Swastik Dental Care Logo" width={72} height={72} className={styles.logoImg} priority />
+            <Image src={getPath("/images/logo.png")} alt="Swastik Dental Care Logo" width={72} height={72} className={styles.logoImg} priority />
           </div>
           <div>
             <span className={styles.logoName}>{CLINIC.name}</span>

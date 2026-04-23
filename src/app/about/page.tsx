@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { CLINIC } from "@/lib/data";
+import { getPath } from "@/lib/utils";
 import styles from "./about.module.css";
 
 export const metadata: Metadata = {
@@ -73,7 +74,7 @@ export default function AboutPage() {
           </div>
           <div className={styles.storyImage}>
             <Image
-              src="/images/about-heritage.jpg"
+              src={getPath("/images/about-heritage.jpg")}
               alt="Dr. Ashish Pal and Dr. Shrya Kathait Pal at Swastik Dental Care"
               width={560}
               height={600}
@@ -103,7 +104,7 @@ export default function AboutPage() {
             {campImages.map((img, i) => (
               <div key={i} className={styles.galleryItem}>
                 <Image
-                  src={img.src}
+                  src={getPath(img.src)}
                   alt={img.alt}
                   fill
                   className={styles.galleryImg}
