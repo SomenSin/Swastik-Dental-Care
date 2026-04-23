@@ -20,6 +20,12 @@ export default function AnimatedCounter({
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    // Check if we've already animated in this session
+    if (typeof window !== "undefined" && sessionStorage.getItem("stats_animated")) {
+      setCount(end);
+      return;
+    }
+
     let startTime: number | null = null;
     let animationFrameId: number;
 
@@ -36,6 +42,9 @@ export default function AnimatedCounter({
 
       if (percentage < 1) {
         animationFrameId = requestAnimationFrame(animate);
+      } else {
+        // Set flag so it doesn't animate again in this session
+        sessionStorage.setItem("stats_animated", "true");
       }
     };
 
