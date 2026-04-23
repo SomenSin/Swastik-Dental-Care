@@ -58,7 +58,7 @@ export default function HomePage() {
           </div>
           <div className={styles.heroImage}>
             <Image
-              src="/Swastik-Dental-Care/images/hero-clinic.png"
+              src="/images/hero-clinic.png"
               alt="Dr. Shrya conducting a dental check-up camp at Swastik Dental Care"
               width={600}
               height={450}
@@ -142,6 +142,40 @@ export default function HomePage() {
                 <p className="body-sm text-muted">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FIND US HERE SECTION */}
+      <section className={`section ${styles.findUs}`} id="find-us">
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <div className="badge badge-primary">Location</div>
+            <h2 className="headline-lg">Find Us Here</h2>
+            <div className={styles.divider}></div>
+            <div className={styles.locationInfo}>
+              <div className={styles.infoItem}>
+                <strong>Address:</strong> {CLINIC.address.full}
+              </div>
+              <div className={styles.infoItem}>
+                <strong>Phone:</strong> {CLINIC.phoneDisplay}
+              </div>
+              <div className={styles.infoItem}>
+                <strong>Clinic Timings:</strong> {CLINIC.hours.morning} & {CLINIC.hours.evening} (Sun: {CLINIC.hours.sunday})
+              </div>
+            </div>
+          </div>
+          <div className={styles.mapContainer}>
+            <iframe
+              src={CLINIC.googleMapsEmbed}
+              width="100%"
+              height="450"
+              style={{ border: 0, borderRadius: "var(--radius-lg)" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Clinic Location Map"
+            ></iframe>
           </div>
         </div>
       </section>

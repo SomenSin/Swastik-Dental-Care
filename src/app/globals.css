@@ -4,6 +4,7 @@
 :root {
   /* Primary */
   --primary: #005BBF;
+  --primary-rgb: 0, 91, 191;
   --primary-container: #1A73E8;
   --on-primary: #FFFFFF;
   --on-primary-container: #FFFFFF;

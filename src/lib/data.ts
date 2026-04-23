@@ -37,7 +37,7 @@ export const SERVICES = [
     description: "Professional removal of plaque and tartar to prevent gum disease and maintain a bright, healthy smile.",
     detailedDescription: "Our professional scaling and polishing treatment uses advanced ultrasonic tools to remove stubborn calculus and plaque that regular brushing misses. This procedure is essential for preventing gingivitis, periodontitis, and bad breath, ensuring your gums stay healthy and your teeth remain strong.",
     icon: "tooth",
-    image: "/Swastik-Dental-Care/images/service-cleaning.png",
+    image: "/images/service-cleaning.png",
     features: ["Painless ultrasonic scaling", "Stain removal", "Gum health assessment", "Polishing for smooth finish"]
   },
   {
@@ -46,7 +46,7 @@ export const SERVICES = [
     description: "Safe and painless removal of damaged, decayed, or crowded teeth using modern anesthetic techniques.",
     detailedDescription: "Whether it's a severely decayed tooth or a problematic wisdom tooth, our surgeons perform extractions with the utmost care. We utilize minimally invasive techniques to ensure rapid healing and provide comprehensive post-operative care instructions to keep you comfortable.",
     icon: "shield",
-    image: "/Swastik-Dental-Care/images/service-extraction.png",
+    image: "/images/service-extraction.png",
     features: ["Local anesthesia for comfort", "Minimally invasive approach", "Wisdom tooth management", "Socket preservation"]
   },
   {
@@ -55,7 +55,7 @@ export const SERVICES = [
     description: "A permanent solution for missing teeth that restores function and aesthetics using bridges.",
     detailedDescription: "Fixed Partial Dentures (Bridges) are used to replace one or more missing teeth by joining an artificial tooth permanently to adjacent teeth or dental implants. We use high-quality ceramic and zirconia materials that provide exceptional durability and a natural appearance.",
     icon: "implant",
-    image: "/Swastik-Dental-Care/images/service-fpd-rpd.png",
+    image: "/images/service-fpd.png",
     features: ["Natural-looking bridges", "Zirconia & Ceramic options", "Permanent tooth replacement", "Restores bite function"]
   },
   {
@@ -64,7 +64,7 @@ export const SERVICES = [
     description: "Custom-made removable appliances to replace missing teeth and restore your beautiful smile.",
     detailedDescription: "Removable Partial Dentures are an excellent, cost-effective option for replacing multiple missing teeth. Our custom-designed RPDs are crafted for maximum comfort and a precise fit, helping you eat, speak, and smile with confidence once again.",
     icon: "implant",
-    image: "/Swastik-Dental-Care/images/service-rpd.png",
+    image: "/images/service-rpd.png",
     features: ["Custom-fit design", "Lightweight materials", "Easily removable for cleaning", "Improved chewing ability"]
   },
   {
@@ -73,7 +73,7 @@ export const SERVICES = [
     description: "Restoring decayed teeth with tooth-colored composite resin for a natural and durable result.",
     detailedDescription: "We use state-of-the-art composite resin materials that bond directly to your tooth structure. These tooth-colored fillings are not only aesthetically invisible but also provide superior strength and longevity compared to traditional silver amalgams.",
     icon: "sparkle",
-    image: "/Swastik-Dental-Care/images/service-filling.png",
+    image: "/images/service-filling.png",
     features: ["Tooth-colored composite", "Mercury-free materials", "Aesthetic restoration", "Prevents further decay"]
   },
   {
@@ -82,7 +82,7 @@ export const SERVICES = [
     description: "Painless root canal procedures to save infected teeth and eliminate deep dental pain.",
     detailedDescription: "Our root canal specialist uses rotary endodontics and apex locators to perform efficient, painless treatments. By removing the infected pulp and sealing the tooth, we can save your natural tooth and prevent the need for extraction.",
     icon: "shield",
-    image: "/Swastik-Dental-Care/images/service-root-canal.png",
+    image: "/images/service-root-canal.png",
     features: ["Rotary endodontics", "Single-visit options", "Infection control", "Pain management experts"]
   },
   {
@@ -91,7 +91,7 @@ export const SERVICES = [
     description: "The gold standard for tooth replacement, offering permanent stability and natural function.",
     detailedDescription: "Dental implants are titanium posts that act as artificial tooth roots. Once integrated with the bone, they provide a rock-solid foundation for crowns, bridges, or dentures. It is the most advanced and durable way to replace missing teeth today.",
     icon: "implant",
-    image: "/Swastik-Dental-Care/images/service-implants.png",
+    image: "/images/service-implants.png",
     features: ["Titanium implants", "Bone grafting if needed", "Computer-guided surgery", "Lifetime solution"]
   },
   {
@@ -100,7 +100,7 @@ export const SERVICES = [
     description: "Correcting misaligned teeth and bite issues with modern braces and clear aligners.",
     detailedDescription: "From traditional metallic braces to modern clear aligners like Invisalign, we offer a range of solutions to straighten your teeth. A properly aligned bite not only looks better but is also easier to clean and maintain throughout your life.",
     icon: "align",
-    image: "/Swastik-Dental-Care/images/service-ortho.png",
+    image: "/images/service-ortho.png",
     features: ["Invisalign & Clear aligners", "Ceramic (invisible) braces", "Metal braces", "Retainers & Follow-up"]
   },
   {
@@ -109,7 +109,7 @@ export const SERVICES = [
     description: "Gentle and fun dental care focused on the unique needs of infants, children, and teens.",
     detailedDescription: "We strive to create a positive dental experience for our youngest patients. Our pediatric treatments include preventive sealants, fluoride applications, and habit counseling, all delivered in a friendly environment to build a lifetime of healthy smiles.",
     icon: "child",
-    image: "/Swastik-Dental-Care/images/service-pediatric.png",
+    image: "/images/service-pediatric.png",
     features: ["Kid-friendly environment", "Sealants & Fluoride", "Pulpotomy & Fillings", "Growth monitoring"]
   },
 ];
@@ -122,7 +122,7 @@ export const DOCTORS = [
     specialization: "General Dentist",
     experience: "13+ Years Experience",
     bio: "Dr. Ashish Pal is the visionary behind Swastik Dental Care. With 13 years of clinical excellence, he specializes in general dentistry with a focus on comprehensive patient care and preventive treatments. His gentle approach and commitment to pain-free dentistry have earned him the trust of thousands of patients in Dehradun.",
-    image: "/Swastik-Dental-Care/images/doctor-ashish.png",
+    image: "/images/doctor-ashish.png",
   },
   {
     id: "dr-shrya",
@@ -131,7 +131,7 @@ export const DOCTORS = [
     specialization: "General Dentist & Orthodontic Consultant",
     experience: "7+ Years Experience",
     bio: "Dr. Shrya Kathait Pal is a dedicated dental professional with 7 years of clinical experience. She specializes in general dentistry with a strong focus on patient comfort and comprehensive dental solutions. Her expertise in managing patient dental anxiety and delivering meticulous treatments has made her a favorite among clinic visitors.",
-    image: "/Swastik-Dental-Care/images/doctor-shanu.png",
+    image: "/images/doctor-shanu.png",
   },
 ];
 
@@ -142,7 +142,7 @@ export const REVIEWS = [
     text: "Had a great experience with Dr. Ashish for my root canal. I was really nervous but he made the whole process painless. The clinic is very clean as well. Best dentist in Harrawala area.",
     date: "March 2026",
     treatment: "Root Canal",
-    image: "/Swastik-Dental-Care/images/patient-aarav.png",
+    image: "/images/patient-aarav.png",
   },
   {
     name: "Sneha Rawat",
@@ -150,7 +150,7 @@ export const REVIEWS = [
     text: "Brought my daughter for her checkup. The doctors are very friendly with kids. Only downside was that we had to wait for 20 minutes despite having an appointment. Overall good care.",
     date: "February 2026",
     treatment: "Pediatric Check-up",
-    image: "/Swastik-Dental-Care/images/patient-sneha.png",
+    image: "/images/patient-sneha.png",
   },
   {
     name: "Rahul Panwar",
@@ -158,7 +158,7 @@ export const REVIEWS = [
     text: "Decent clinic with modern equipment. Dr. Shrya is very gentle. The treatment was good, just felt the reception could be a bit more organized during rush hours.",
     date: "November 2025",
     treatment: "Scaling & Polishing",
-    image: "/Swastik-Dental-Care/images/patient-rahul.png",
+    image: "/images/patient-rahul.png",
   },
   {
     name: "Vikram Singh",
@@ -166,7 +166,7 @@ export const REVIEWS = [
     text: "Excellent service. Got my wisdom tooth extracted here. It was much quicker and less painful than I expected. Appreciate the post-op follow up call too.",
     date: "January 2026",
     treatment: "Extraction",
-    image: "/Swastik-Dental-Care/images/patient-vikram.png",
+    image: "/images/patient-vikram.png",
   },
   {
     name: "Deepika Joshi",
@@ -174,7 +174,7 @@ export const REVIEWS = [
     text: "The clinic is very modern and well equipped. I got my teeth cleaning done. Result is good, though I felt the cost was slightly higher than others. But the quality is definitely better.",
     date: "December 2025",
     treatment: "Teeth Cleaning",
-    image: "/Swastik-Dental-Care/images/patient-deepika.png",
+    image: "/images/patient-deepika.png",
   },
   {
     name: "Meera Chauhan",
@@ -182,7 +182,7 @@ export const REVIEWS = [
     text: "Best dental experience in Dehradun. Hygiene standards are top notch. I'm very satisfied with my crown placement. Highly recommend Dr. Ashish.",
     date: "October 2025",
     treatment: "FPD (Bridges)",
-    image: "/Swastik-Dental-Care/images/patient-meera.png",
+    image: "/images/patient-meera.png",
   },
   {
     name: "Ankit Bisht",
@@ -190,7 +190,7 @@ export const REVIEWS = [
     text: "Highly skilled doctors. They don't suggest unnecessary treatments which is a plus. Finding parking nearby can be a bit challenging during evening hours though.",
     date: "September 2025",
     treatment: "General Check-up",
-    image: "/Swastik-Dental-Care/images/patient-ankit.png",
+    image: "/images/patient-ankit.png",
   },
   {
     name: "Priti Negi",
@@ -198,7 +198,7 @@ export const REVIEWS = [
     text: "Thank you Dr. Ashish for fixing my cavity! The filling looks so natural, can't even tell it's there. The staff at Swastik Dental Care is very polite.",
     date: "August 2025",
     treatment: "Cavity Filling",
-    image: "/Swastik-Dental-Care/images/patient-priti.png",
+    image: "/images/patient-priti.png",
   },
 ];
 

@@ -1,5 +1,5 @@
 export function getPath(path: string): string {
-  const basePath = "/Swastik-Dental-Care";
+  const basePath = "";
   if (path.startsWith("/")) {
     return `${basePath}${path}`;
   }

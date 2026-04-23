@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   const campImages = [
-    { src: "/Swastik-Dental-Care/images/hero-clinic.png", alt: "Dr. Shrya consulting a patient at a dental camp" },
-    { src: "/Swastik-Dental-Care/images/camp-1.jpg", alt: "Dr. Ashish and Dr. Shrya at a dental check-up camp" },
-    { src: "/Swastik-Dental-Care/images/camp-2.jpg", alt: "The medical team at Swastik Dental Care camp" },
-    { src: "/Swastik-Dental-Care/images/camp-3.jpg", alt: "Patient screening during dental outreach" },
+    { src: "/images/hero-clinic.png", alt: "Dr. Shrya consulting a patient at a dental camp" },
+    { src: "/images/camp-1.jpg", alt: "Dr. Ashish and Dr. Shrya at a dental check-up camp" },
+    { src: "/images/camp-2.jpg", alt: "The medical team at Swastik Dental Care camp" },
+    { src: "/images/camp-3.jpg", alt: "Patient screening during dental outreach" },
   ];
 
   return (
@@ -73,7 +73,7 @@ export default function AboutPage() {
           </div>
           <div className={styles.storyImage}>
             <Image
-              src="/Swastik-Dental-Care/images/about-heritage.jpg"
+              src="/images/about-heritage.jpg"
               alt="Dr. Ashish Pal and Dr. Shrya Kathait Pal at Swastik Dental Care"
               width={560}
               height={600}
