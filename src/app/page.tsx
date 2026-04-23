@@ -16,6 +16,8 @@ const serviceIcons: Record<string, React.ReactNode> = {
   child: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 10-16 0"/></svg>,
 };
 
+import AnimatedCounter from "@/components/AnimatedCounter";
+
 export default function HomePage() {
   return (
     <>
@@ -44,15 +46,21 @@ export default function HomePage() {
             </div>
             <div className={styles.heroStats}>
               <div className={styles.stat}>
-                <span className={styles.statNum}>{CLINIC.experience}</span>
+                <span className={styles.statNum}>
+                  <AnimatedCounter end={8} suffix="+" />
+                </span>
                 <span className={styles.statLabel}>Years Experience</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statNum}>5000+</span>
+                <span className={styles.statNum}>
+                  <AnimatedCounter end={5000} suffix="+" />
+                </span>
                 <span className={styles.statLabel}>Happy Patients</span>
               </div>
               <div className={styles.stat}>
-                <span className={styles.statNum}>4.7★</span>
+                <span className={styles.statNum}>
+                  <AnimatedCounter end={4.7} decimals={1} suffix="★" />
+                </span>
                 <span className={styles.statLabel}>Google Rating</span>
               </div>
             </div>
