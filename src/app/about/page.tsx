@@ -7,6 +7,9 @@ import styles from "./about.module.css";
 export const metadata: Metadata = {
   title: "Best Dental Clinic in Dehradun | Our Story & Expertise",
   description: `Discover how Swastik Dental Care became the most trusted dental clinic in Harrawala, Dehradun. Exceptional care in implants, RCT, and braces since ${CLINIC.since}.`,
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

@@ -3,7 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import { CLINIC } from "@/lib/data";
+import { CLINIC, SERVICES, REVIEWS, DOCTORS } from "@/lib/data";
+import ChatbotWidget from "@/components/ChatbotWidget";
 
 export const metadata: Metadata = {
   title: {
@@ -45,57 +46,97 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  metadataBase: new URL("https://swastikdentalcare.info"), // Updated domain placeholder
+  metadataBase: new URL("https://swastikdentalcare.info"),
+  alternates: {
+    canonical: "/",
+  },
 };
+
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Dentist",
-  name: CLINIC.name,
-  image: "https://swastikdentalcare.info/images/logo.png",
-  "@id": "https://swastikdentalcare.info",
-  url: "https://swastikdentalcare.info",
-  telephone: CLINIC.phone,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: CLINIC.address.line1,
-    addressLocality: "Dehradun",
-    addressRegion: "Uttarakhand",
-    postalCode: CLINIC.address.pincode,
-    addressCountry: "IN",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: CLINIC.coordinates.lat,
-    longitude: CLINIC.coordinates.lng,
-  },
-  openingHoursSpecification: [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "10:00",
-      closes: "13:30",
+      "@type": ["Dentist", "MedicalBusiness"],
+      "@id": "https://swastikdentalcare.info/#clinic",
+      "name": CLINIC.name,
+      "image": "https://swastikdentalcare.info/images/logo.png",
+      "url": "https://swastikdentalcare.info",
+      "telephone": CLINIC.phone,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": CLINIC.address.line1,
+        "addressLocality": "Dehradun",
+        "addressRegion": "Uttarakhand",
+        "postalCode": CLINIC.address.pincode,
+        "addressCountry": "IN",
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": CLINIC.coordinates.lat,
+        "longitude": CLINIC.coordinates.lng,
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "10:00",
+          "closes": "13:30",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "17:00",
+          "closes": "20:00",
+        },
+        {
+           "@type": "OpeningHoursSpecification",
+           "dayOfWeek": "Sunday",
+           "opens": "00:00",
+           "closes": "00:00",
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": CLINIC.rating.toString(),
+        "reviewCount": CLINIC.totalReviews.toString(),
+      },
+      "review": REVIEWS.slice(0, 3).map(r => ({
+        "@type": "Review",
+        "author": { "@type": "Person", "name": r.name },
+        "datePublished": "2026-03-01",
+        "reviewBody": r.text,
+        "reviewRating": { "@type": "Rating", "ratingValue": r.rating.toString() }
+      })),
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Dental Services",
+        "itemListElement": SERVICES.map((s, i) => ({
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": s.title,
+            "description": s.description
+          },
+          "position": i + 1
+        }))
+      },
+      "employee": DOCTORS.map(d => ({
+        "@type": "Person",
+        "name": d.name,
+        "jobTitle": d.specialization
+      })),
+      "priceRange": "₹₹",
+      "sameAs": [CLINIC.googleMapsUrl],
     },
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "17:00",
-      closes: "20:00",
-    },
-    {
-       "@type": "OpeningHoursSpecification",
-       dayOfWeek: "Sunday",
-       opens: "00:00",
-       closes: "00:00", // Closed
+      "@type": "WebSite",
+      "@id": "https://swastikdentalcare.info/#website",
+      "url": "https://swastikdentalcare.info",
+      "name": CLINIC.name,
+      "publisher": { "@id": "https://swastikdentalcare.info/#clinic" }
     }
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.7",
-    reviewCount: "40",
-  },
-  priceRange: "₹₹",
-  sameAs: [CLINIC.googleMapsUrl],
+  ]
 };
 
 export default function RootLayout({
@@ -117,6 +158,7 @@ export default function RootLayout({
         <main style={{ paddingTop: "76px" }}>{children}</main>
         <Footer />
         <WhatsAppFloat />
+        <ChatbotWidget />
       </body>
     </html>
   );

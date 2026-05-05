@@ -6,8 +6,11 @@ import { getPath } from "@/lib/utils";
 import styles from "./reviews.module.css";
 
 export const metadata: Metadata = {
-  title: "Patient Reviews",
+  title: "Patient Reviews | Swastik Dental Care Dehradun",
   description: "Read real reviews from our happy patients. See why Swastik Dental Care is rated 4.7 stars in Dehradun.",
+  alternates: {
+    canonical: "/reviews",
+  },
 };
 
 function Stars({ count, size = 24 }: { count: number; size?: number }) {

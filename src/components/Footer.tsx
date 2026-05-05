@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CLINIC, NAV_LINKS } from "@/lib/data";
 import { getPath } from "@/lib/utils";
+import EmailObfuscator from "./EmailObfuscator";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -55,9 +56,9 @@ export default function Footer() {
           <a href={`tel:${CLINIC.phone}`} className={styles.footerLink}>
             📞 {CLINIC.phoneDisplay}
           </a>
-          <a href={`mailto:${CLINIC.email}`} className={styles.footerLink}>
+          <EmailObfuscator email={CLINIC.email} className={styles.footerLink}>
             ✉️ {CLINIC.email}
-          </a>
+          </EmailObfuscator>
           <p className={styles.footerLink}>
             📍 {CLINIC.address.full}
           </p>
