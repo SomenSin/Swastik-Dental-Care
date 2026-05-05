@@ -1,23 +1,32 @@
 import { MetadataRoute } from 'next';
-import { NAV_LINKS } from '@/lib/data';
+import { SERVICES } from '@/lib/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://swastikdentalcare.info';
-
-  const routes = NAV_LINKS.map((link) => ({
-    url: `${baseUrl}${link.href}`,
+  const baseUrl = 'https://somensin.github.io/Swastik-Dental-Care';
+  
+  const staticRoutes = [
+    '',
+    '/about',
+    '/services',
+    '/doctors',
+    '/reviews',
+    '/contact',
+    '/privacy',
+    '/terms',
+    '/disclaimer',
+  ].map((route) => ({
+    url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
-    priority: link.href === '/' ? 1 : 0.8,
+    priority: route === '' ? 1 : 0.8,
   }));
 
-  // Add legal pages
-  const legalPages = ['/privacy', '/terms', '/disclaimer'].map((path) => ({
-    url: `${baseUrl}${path}`,
+  const serviceRoutes = SERVICES.map((service) => ({
+    url: `${baseUrl}/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`,
     lastModified: new Date(),
-    changeFrequency: 'yearly' as const,
-    priority: 0.3,
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
   }));
 
-  return [...routes, ...legalPages];
+  return [...staticRoutes, ...serviceRoutes];
 }
