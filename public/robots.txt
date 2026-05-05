@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+
+Sitemap: https://somensin.github.io/Swastik-Dental-Care/sitemap.xml
