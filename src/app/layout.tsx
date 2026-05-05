@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     siteName: CLINIC.name,
     title: `${CLINIC.name} | Best Dental Clinic in Dehradun`,
-    description: `Expert dental care in Dehradun – Implants, Root Canals, and Orthodontics. Visit the most trusted dentists at ${CLINIC.address.full}.`,
+    description: `Expert dental care in Dehradun â€“ Implants, Root Canals, and Orthodontics. Visit the most trusted dentists at ${CLINIC.address.full}.`,
   },
   robots: {
     index: true,
@@ -126,7 +126,7 @@ const jsonLd = {
         "name": d.name,
         "jobTitle": d.specialization
       })),
-      "priceRange": "₹₹",
+      "priceRange": "â‚¹â‚¹",
       "sameAs": [CLINIC.googleMapsUrl],
     },
     {
